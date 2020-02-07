@@ -9,7 +9,9 @@
   },
   "dependencies": {
     "core-js": "^3.4.4",
+    "leaflet": "^1.6.0",
     "vue": "^2.6.10",
+    "vue-router": "^3.1.5",
     "zircle": "^1.2.5"
   },
   "devDependencies": {
@@ -30,7 +32,14 @@
       "plugin:vue/essential",
       "eslint:recommended"
     ],
-    "rules": {},
+    "rules": {
+      "vue/no-unused-components": [
+        "error",
+        {
+          "ignoreWhenBindingPresent": true
+        }
+      ]
+    },
     "parserOptions": {
       "parser": "babel-eslint"
     }

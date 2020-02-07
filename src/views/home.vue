@@ -1,13 +1,15 @@
 <template>
-  <z-view label="zircle demo" label-pos="bottom" size="xxl">
+  <z-view>
     11:53 PM
     <br />
-    <br />Monday, Oct
+    Monday, Oct.
     <br />
     <br />
-    <h1>{{scene}}</h1>
-    <br />Outside 29˚C, sunny
-    <br />Inside 25˚C
+    <h1>Night mode</h1>
+    <br />
+    Outside 29˚C, sunny
+    <br />
+    Inside 25˚C
     <div slot="extension">
       <!-- status monitor -->
       <z-spot
@@ -17,12 +19,19 @@
         :distance="120"
         to-view="status"
       >
-        <i style="color: var( --accent-text-color)" class="fas fa-bell"></i>
-        <br />
+        <i style="color: var( --accent-text-color)" class="fas fa-bell"></i
+        ><br />
         <span style="color: var( --accent-text-color)">15</span>
       </z-spot>
       <!-- family-->
-      <z-spot :angle="-30" size="s" :distance="120" label="family" label-pos="top" to-view="maps">
+      <z-spot
+        :angle="-30"
+        size="s"
+        :distance="120"
+        label="family"
+        label-pos="right"
+        to-view="family"
+      >
         <i class="fas fa-map-marker-alt"></i>
       </z-spot>
       <!-- scenes-->
@@ -33,9 +42,20 @@
         label="scenes"
         label-pos="right"
         to-view="scenes"
-      >4</z-spot>
+      >
+        4
+      </z-spot>
       <!-- rooms-->
-      <z-spot :angle="30" size="s" :distance="120" label="Rooms" label-pos="right" to-view="rooms">5</z-spot>
+      <z-spot
+        :angle="30"
+        size="s"
+        :distance="120"
+        label="Rooms"
+        label-pos="right"
+        to-view="rooms"
+      >
+        5
+      </z-spot>
       <!-- devices-->
       <z-spot
         :angle="60"
@@ -44,9 +64,17 @@
         label="Devices"
         label-pos="right"
         to-view="devices"
-      >45</z-spot>
+      >
+        45
+      </z-spot>
       <!-- settings-->
-      <z-spot :angle="150" :distance="120" size="s" label="Settings" to-view="settings">
+      <z-spot
+        :angle="150"
+        :distance="120"
+        size="s"
+        label="Settings"
+        to-view="settings"
+      >
         <i class="fas fa-sliders-h"></i>
       </z-spot>
     </div>
